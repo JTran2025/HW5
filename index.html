@@ -1,0 +1,70 @@
+<!--
+File: index.html
+GUI Assignment: HW5 Implementing a Bit of Scrabble with Drag-and-Drop
+Julian Tran, UMass Lowell Computer Science, Julian_Tran@student.uml.edu
+Copyright (c) 2024 by Julian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created on December 11, 2024
+
+This html file creates the structure of the main Scrabble board with
+up to 8 dedicated squares. A container for the tile rack is created 
+to place the randomly generated tiles. There is a button for moving 
+on to the next word and a button to reset the entire game. There are 
+text displays for the word being formed, the current score of the word, 
+a high score of the session, and the total amount of tiles left. Lastly,
+there is a header and a footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrabble Game</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+  <div class="game-container">
+    <header>
+        <h1>tiny SCRABBLE</h1>
+    </header>
+    <!-- Board container -->
+    <h3>Word: <span id="placedLetters"></span></h3>
+    <div class="scoreboard">
+        <h3>Current Score: <span id="score">0</span></h3>
+        <h3>Highest Score: <span id="highestScore">0</span></h3>
+        <h3>Tiles Left: <span id="tilesLeft">0</span></h3>
+      </div>
+    <div class="board">
+      <!-- Square placeholders for the board (positions calculated below) -->
+      <div class="square" id="square1"></div>
+      <div class="square" id="square2"></div>
+      <div class="square" id="squareDW"></div>
+      <div class="square" id="square4"></div>
+      <div class="square" id="square5"></div>
+      <div class="square" id="square6"></div>
+      <div class="square" id="square7"></div>
+      <div class="square" id="squareDL"></div>
+    </div>
+
+    <div class="rack">
+        <!-- Tile container (draggable tiles) -->
+        <div class="tile-container">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="nextWordButton">Next Word</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <footer>
+        <span>&copy;2024 Julian Tran</span>
+    </footer>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

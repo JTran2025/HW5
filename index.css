@@ -1,0 +1,147 @@
+/*
+File: index.css
+GUI Assignment: HW5 Implementing a Bit of Scrabble with Drag-and-Drop
+Julian Tran, UMass Lowell Computer Science, Julian_Tran@student.uml.edu
+Copyright (c) 2024 by Julian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created on December 11, 2024
+
+This css file styles the index.html file. It adds font colors, borders, 
+margins, and padding to the elements. Most importantly, it add the Scrabble
+board and tile rack onto the webpage as background images. Additionally, it
+dedicates each of the squares from the Scrabble board image. Some effects
+were added like a hover effect where the closest square of the dragged tile
+changes color.
+
+Reference: Scrabble_Board_OneLineEdit.png and
+            images/scrabble-tile-holder-406774_640.png from HW5
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    position: relative;
+    width: 602px; /* Width of the board image */
+    height: 80px; /* Height of the board image */
+    background-image: url('images/Scrabble_Board_OneLineEdit.png'); /* Your Scrabble board image */
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.square {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.tile-container {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+
+}
+.rack {
+    width: 100%;  /* Set the width of the element */
+    height: 200px;  /* Set the height of the element (you can adjust this as needed) */
+    background-image: url('images/scrabble-tile-holder-406774_640.png');  /* Your image URL */
+    background-size: contain;  /* Scale the image to ensure the entire image is visible */
+    background-repeat: no-repeat;  /* Prevent the image from repeating */
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 5px;
+    cursor: grab;
+    user-select: none;
+}
+
+.tile[draggable="true"] {
+    cursor: grab;
+}
+
+#square1 {
+    top: 6px;
+    left: 6px;
+}
+#square2 {
+    top: 6px;
+    left: 80px;
+}
+#squareDW {
+    top: 6px;
+    left: 156px;
+}
+#square4 {
+    top: 6px;
+    left: 231px;
+}
+#square5 {
+    top: 6px;
+    left: 305px;
+}
+#square6 {
+    top: 6px;
+    left: 379px;
+}
+#square7 {
+    top: 6px;
+    left: 454px;
+}
+#squareDL {
+    top: 6px;
+    left: 527px;
+}
+.hovered {
+    background-color: lightgreen !important;
+}
+
+h3 {
+    display: inline;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-align: center;
+}
+button {
+    padding: 10px;
+    display:inline;
+}
+.scoreboard h3{
+    text-align: center;
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+    border-bottom: solid;
+}
+
+footer {
+    font-size: 70%;
+    margin-top: 100px;
+}
